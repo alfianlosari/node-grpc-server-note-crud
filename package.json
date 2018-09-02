@@ -1,0 +1,16 @@
+{
+  "name": "notes_grpc",
+  "version": "1.0.0",
+  "description": "gRPC Server that provided CRUD Note Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Alfian Losari",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.3.0",
+    "grpc": "^1.14.1",
+    "uuid": "^3.3.2"
+  }
+}
