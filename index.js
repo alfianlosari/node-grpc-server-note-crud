@@ -13,7 +13,7 @@ server.addService(notesProto.NoteService.service, {
         callback(null, notes)
     },
     get: (call, callback) => {
-        let note =notes.find((n) => n.id == call.request.id)
+        let note = notes.find((n) => n.id == call.request.id)
         if (note) {
             callback(null, note)
         } else {
