@@ -1,6 +1,6 @@
 const grpcLibrary = require('@grpc/grpc-js')
 const protoLoader = require('@grpc/proto-loader')
-const uuidv1 = require('uuid/v1')
+const { v1: uuidv1 } = require('uuid')
 
 
 const notesProtoLoad = protoLoader.loadSync('notes.proto')
