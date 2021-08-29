@@ -2,6 +2,7 @@ syntax = "proto3";
 
 service NoteService {
     rpc List (Empty) returns (NoteList) {}
+    rpc ListSteam (Empty) returns (stream Note) {}
     rpc Get (NoteRequestId) returns (Note) {}
     rpc Insert (Note) returns (Note) {}
     rpc Update (Note) returns (Note) {}
