@@ -1,7 +1,7 @@
-const PROTO_PATH = './notes.proto';
-const grpc = require('grpc');
-const NoteService = grpc.load(PROTO_PATH).NoteService
-const client = new NoteService('localhost:50051',
-    grpc.credentials.createInsecure());
+const grpcLibrary = require('@grpc/grpc-js')
+const protoLoader = require('@grpc/proto-loader')
 
+const notesProto = grpcLibrary.loadPackageDefinition(protoLoader.loadSync('notes.proto'));
+
+const client = new notesProto.NoteService('localhost:5005', grpcLibrary.credentials.createInsecure());
 module.exports = client
